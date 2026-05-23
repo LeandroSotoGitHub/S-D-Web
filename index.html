@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S&D — Sostenibilidad y Desarrollo de Negocios</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="img/logo.png" alt="S&D — Sostenibilidad y Desarrollo de Negocios" />
+      <div>
+        <span class="brand-name">S&amp;D</span>
+        <span class="brand-sub">Sostenibilidad y Desarrollo</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#pilares" class="nav-active">Enfoque</a></li>
+      <li><a href="servicios.html" >Servicios</a></li>
+      <li><a href="quienes-somos.html" >Quiénes Somos</a></li>
+      <li><a href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20S%26D" target="_blank" class="nav-cta">Conversemos</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="mobile-menu">
+  <a href="index.html#pilares" onclick="closeMenu()">Enfoque</a>
+  <a href="servicios.html" onclick="closeMenu()">Servicios</a>
+  <a href="quienes-somos.html" onclick="closeMenu()">Quiénes Somos</a>
+  <a href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20S%26D"
+     target="_blank" class="nav-cta" onclick="closeMenu()">Conversemos</a>
+</div>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  SECCIÓN: HERO                       ║
+     ╚══════════════════════════════════════╝ -->
+<section id="hero">
+
+  <!-- Marca de agua decorativa (logo muy tenue de fondo) -->
+  <!-- El JS de index.js le asigna la imagen -->
+  <div class="hero-wm" id="hero-wm"></div>
+
+  <div class="hero-inner hero-zone">
+
+    <!-- Texto principal -->
+    <div class="hero-copy">
+      <p class="hero-label fade-up">Consultora estratégica</p>
+
+      <h1 class="hero-headline fade-up d1">
+        Sostenibilidad<br />
+        <em>y Desarrollo</em><br />
+        de Negocios
+      </h1>
+
+      <p class="hero-sub fade-up d2">
+        Impulsamos negocios sostenibles desarrollando organizaciones y personas.
+        Integramos estrategia, gestión y desarrollo humano para lograr resultados sostenibles.
+      </p>
+
+      <div class="hero-actions fade-up d3">
+        <a href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20S%26D"
+           target="_blank" class="btn-primary">
+          <!-- Ícono WhatsApp -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.549 4.1 1.508 5.822L.057 23.25c-.07.252.18.486.43.416l5.552-1.45A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.034-1.39l-.36-.214-3.724.976.992-3.624-.235-.372A9.808 9.808 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+          Agendar una conversación
+        </a>
+
+        <a href="servicios.html" class="btn-ghost">
+          Ver servicios
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Logo animado -->
+    <div class="hero-visual fade-up d2">
+      <div class="hero-logo-wrap">
+        <img src="img/logo.png" alt="S&D" />
+      </div>
+      <p class="hero-tagline">
+        Procesos de desarrollo<br />para negocios en evolución
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  SECCIÓN: PILARES (3 enfoques)       ║
+     ╚══════════════════════════════════════╝ -->
+<section id="pilares">
+  <div class="container">
+
+    <div class="section-header">
+      <p class="section-eyebrow fade-up">Nuestro enfoque</p>
+      <h2 class="section-title fade-up d1">
+        Una mirada <em>integral</em><br />para desafíos complejos
+      </h2>
+      <p class="section-desc fade-up d2">
+        Combinamos gestión de negocios y desarrollo humano
+        para generar impacto real y sostenido.
+      </p>
+    </div>
+
+    <div class="pilares-grid">
+
+      <div class="pilar fade-up">
+        <div class="pilar-number">01</div>
+        <div class="pilar-icon">
+          <svg viewBox="0 0 36 36" fill="none" stroke="#7A1E2C" stroke-width="1.2">
+            <rect x="6"  y="18" width="6" height="12" rx="1"/>
+            <rect x="15" y="12" width="6" height="18" rx="1"/>
+            <rect x="24" y="6"  width="6" height="24" rx="1"/>
+            <path d="M8 16L16 10L23 14L30 6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="pilar-title">Desarrollo de Negocios</h3>
+        <p class="pilar-desc">
+          Ordenamos, estructuramos y potenciamos el crecimiento de las organizaciones
+          con rigor analítico y visión estratégica.
+        </p>
+      </div>
+
+      <div class="pilar fade-up d1">
+        <div class="pilar-number">02</div>
+        <div class="pilar-icon">
+          <svg viewBox="0 0 36 36" fill="none" stroke="#7A1E2C" stroke-width="1.2">
+            <circle cx="18" cy="18" r="10"/>
+            <circle cx="18" cy="18" r="5"/>
+            <path d="M18 4v4M18 28v4M4 18h4M28 18h4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="pilar-title">Sostenibilidad</h3>
+        <p class="pilar-desc">
+          Construimos negocios con visión de largo plazo y bases sólidas.
+          Crecimiento que dura, no solo que ocurre.
+        </p>
+      </div>
+
+      <div class="pilar fade-up d2">
+        <div class="pilar-number">03</div>
+        <div class="pilar-icon">
+          <svg viewBox="0 0 36 36" fill="none" stroke="#7A1E2C" stroke-width="1.2">
+            <circle cx="18" cy="10" r="5"/>
+            <circle cx="8"  cy="27" r="4"/>
+            <circle cx="28" cy="27" r="4"/>
+            <path d="M14 14L10 23M22 14L26 23M12 27L24 27" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="pilar-title">Desarrollo de Personas</h3>
+        <p class="pilar-desc">
+          Fortalecemos liderazgo, equipos y procesos de transformación.
+          Toda organización evoluciona cuando sus líderes evolucionan.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  SECCIÓN: CARRUSEL DE IMÁGENES       ║
+     ║  Para reemplazar las imágenes:       ║
+     ║  cambiar el atributo src de cada img ║
+     ╚══════════════════════════════════════╝ -->
+<section id="carousel">
+
+  <div class="carousel-track" id="carouselTrack">
+
+    <!-- Slide 1 -->
+    <div class="carousel-slide">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80&fit=crop"
+           alt="Estrategia de negocios" loading="lazy" />
+      <div class="carousel-overlay"></div>
+      <div class="carousel-content">
+        <div>
+          <p class="carousel-label">Desarrollo de Negocios</p>
+          <h3 class="carousel-title">
+            Tu negocio creció.<br /><em>¿Tu estructura lo acompaña?</em>
+          </h3>
+          <p class="carousel-sub">
+            Muchas organizaciones crecen con esfuerzo pero sin los cimientos necesarios
+            para sostenerse. Ahí empezamos nosotras.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-slide">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&q=80&fit=crop"
+           alt="Liderazgo y equipos" loading="lazy" />
+      <div class="carousel-overlay"></div>
+      <div class="carousel-content">
+        <div>
+          <p class="carousel-label">Liderazgo y Personas</p>
+          <h3 class="carousel-title">
+            El primer cambio<br /><em>empieza en quien lidera.</em>
+          </h3>
+          <p class="carousel-sub">
+            Acompañamos a líderes, dueños y equipos a desarrollar las herramientas
+            para gestionar con claridad y convicción.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-slide">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80&fit=crop"
+           alt="Crecimiento sostenible" loading="lazy" />
+      <div class="carousel-overlay"></div>
+      <div class="carousel-content">
+        <div>
+          <p class="carousel-label">Sostenibilidad</p>
+          <h3 class="carousel-title">
+            Construimos negocios<br /><em>que duran en el tiempo.</em>
+          </h3>
+          <p class="carousel-sub">
+            No trabajamos para el resultado inmediato. Trabajamos para que tu organización
+            tenga bases sólidas que la sostengan en el largo plazo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Dots de navegación (los genera index.js) -->
+  <div class="carousel-nav">
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+
+  <!-- Flechas de navegación -->
+  <div class="carousel-arrows">
+    <button class="carousel-btn" id="prevBtn" aria-label="Anterior">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+    </button>
+    <button class="carousel-btn" id="nextBtn" aria-label="Siguiente">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </div>
+
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  SECCIÓN: ENFOQUE / QUOTE            ║
+     ╚══════════════════════════════════════╝ -->
+<section id="enfoque">
+  <div class="enfoque-inner">
+
+    <div class="fade-up">
+      <blockquote class="enfoque-quote">
+        "Cada negocio tiene desafíos únicos que, cuando se eligen transitar como
+        oportunidades, pueden transformarse en grandes procesos de crecimiento."
+        <span>— S&amp;D · Sostenibilidad y Desarrollo</span>
+      </blockquote>
+    </div>
+
+    <div class="enfoque-content fade-up d2">
+      <p class="section-eyebrow">Nuestra propuesta</p>
+      <h2 class="section-title">Claridad.<br /><em>Estructura. Evolución.</em></h2>
+      <div class="enfoque-sep"></div>
+      <p class="section-desc">
+        Creamos espacios de análisis, claridad y transformación para acompañar a cada
+        organización en su proceso único de crecimiento.
+        Sin recetas genéricas. Con presencia real.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  SECCIÓN: SERVICIOS (preview)        ║
+     ║  Cada card tiene botón a servicios   ║
+     ╚══════════════════════════════════════╝ -->
+<section id="servicios">
+  <div class="container">
+
+    <div class="section-header">
+      <p class="section-eyebrow fade-up">Lo que hacemos</p>
+      <h2 class="section-title fade-up d1">Nuestros <em>servicios</em></h2>
+      <p class="section-desc fade-up d2">
+        Cada servicio está diseñado para un momento específico de la vida de tu organización.
+      </p>
+    </div>
+
+    <!-- Fila superior: 3 servicios -->
+    <div class="servicios-grid">
+
+      <div class="servicio fade-up">
+        <p class="servicio-num">01</p>
+        <div class="servicio-line"></div>
+        <h3 class="servicio-title">Cimientos PyME</h3>
+        <p class="servicio-target">Para organizaciones que crecieron más rápido que su estructura</p>
+        <p class="servicio-desc">
+          Ordenamos procesos, números y comunicación interna para construir
+          bases sólidas y sostenibles.
+        </p>
+        <div class="servicio-footer">
+          <a href="servicios.html#cimientos" class="btn-outline">
+            Ver detalle
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="servicio fade-up d1">
+        <p class="servicio-num">02</p>
+        <div class="servicio-line"></div>
+        <h3 class="servicio-title">Legado y Sucesión</h3>
+        <p class="servicio-target">Para empresas familiares en transición generacional</p>
+        <p class="servicio-desc">
+          Acompañamos procesos de sucesión integrando protocolos familiares,
+          liderazgo y profesionalización.
+        </p>
+        <div class="servicio-footer">
+          <a href="servicios.html#legado" class="btn-outline">
+            Ver detalle
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="servicio fade-up d2">
+        <p class="servicio-num">03</p>
+        <div class="servicio-line"></div>
+        <h3 class="servicio-title">Evolución PyME</h3>
+        <p class="servicio-target">Para emprendimientos que necesitan ordenarse para crecer</p>
+        <p class="servicio-desc">
+          Trabajamos procesos, números y delegación para transformar
+          crecimiento en sostenibilidad.
+        </p>
+        <div class="servicio-footer">
+          <a href="servicios.html#evolucion" class="btn-outline">
+            Ver detalle
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Fila inferior: 2 servicios -->
+    <div class="servicios-bottom">
+
+      <div class="servicio fade-up d1">
+        <p class="servicio-num">04</p>
+        <div class="servicio-line"></div>
+        <h3 class="servicio-title">Mesa Estratégica</h3>
+        <p class="servicio-target">Acompañamiento mensual con mirada estratégica continua</p>
+        <p class="servicio-desc">
+          Reuniones periódicas, seguimiento de objetivos y tablero de control.
+          Un espacio externo de análisis y toma de decisiones.
+        </p>
+        <div class="servicio-footer">
+          <a href="servicios.html#mesa" class="btn-outline">
+            Ver detalle
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="servicio fade-up d2">
+        <p class="servicio-num">05</p>
+        <div class="servicio-line"></div>
+        <h3 class="servicio-title">Liderazgo en Desarrollo</h3>
+        <p class="servicio-target">Coaching ejecutivo y desarrollo profesional</p>
+        <p class="servicio-desc">
+          Acompañamos líderes y profesionales en procesos de crecimiento,
+          toma de decisiones y desarrollo de su rol.
+        </p>
+        <div class="servicio-footer">
+          <a href="servicios.html#liderazgo" class="btn-outline">
+            Ver detalle
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botón "Ver todos" -->
+    <div style="text-align: center; margin-top: 48px;" class="fade-up">
+      <a href="servicios.html" class="btn-primary">
+        Ver todos los servicios
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║  SECCIÓN: CONVERSEMOS (CTA final)    ║
+     ╚══════════════════════════════════════╝ -->
+<section id="contacto">
+
+  <!-- Marca de agua de fondo -->
+  <div class="contacto-wm" id="contacto-wm"></div>
+
+  <div class="contacto-inner">
+    <p class="section-eyebrow fade-up">Siguiente paso</p>
+    <h2 class="contacto-title fade-up d1">Conversemos</h2>
+    <p class="contacto-sub fade-up d2">
+      Si querés desarrollar tu negocio con claridad y dirección,
+      podemos acompañarte. El primer paso es una conversación.
+    </p>
+    <div class="contacto-actions fade-up d3">
+
+      <!-- CAMBIAR el número de WhatsApp aquí -->
+      <a href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20S%26D"
+         target="_blank" class="btn-wsp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.549 4.1 1.508 5.822L.057 23.25c-.07.252.18.486.43.416l5.552-1.45A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.034-1.39l-.36-.214-3.724.976.992-3.624-.235-.372A9.808 9.808 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        WhatsApp
+      </a>
+
+      <!-- CAMBIAR el href por el link de Calendly o Google Calendar -->
+      <a href="#" class="btn-meeting">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+        Agendar una reunión
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="img/logo.png" alt="S&D" />
+      <div>
+        <span class="footer-brand-name">S&amp;D</span>
+        <span class="footer-tagline-small">Sostenibilidad y Desarrollo de Negocios</span>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="quienes-somos.html">Quiénes Somos</a>
+    </nav>
+    <p class="footer-copy">© 2025 S&amp;D — Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<!-- shared.js va primero (nav, animaciones) -->
+<script src="js/shared.js"></script>
+<!-- Luego el JS específico de esta página -->
+<script src="js/index.js"></script>
+
+</body>
+</html>

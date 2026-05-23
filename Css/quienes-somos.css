@@ -1,0 +1,411 @@
+/* ============================================
+   S&D — ESTILOS DE QUIÉNES SOMOS
+   Requiere: css/shared.css
+============================================ */
+
+
+/* ── HERO DE PÁGINA ── */
+.page-hero {
+  padding: 140px 0 80px;
+  background: var(--borgona);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-wm {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  opacity: 0.05;
+  pointer-events: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-hero .container { position: relative; z-index: 1; }
+.page-hero .section-eyebrow { color: var(--arena-oscuro); }
+.page-hero .section-title   { color: var(--beige-claro); font-size: clamp(40px, 5vw, 64px); }
+.page-hero .section-desc    { color: var(--beige-arena); opacity: 0.85; max-width: 600px; }
+
+
+/* ── PROPÓSITO ── */
+#proposito {
+  padding: 100px 0;
+  background: var(--blanco);
+}
+
+.proposito-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.proposito-quote {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--borgona);
+  line-height: 1.35;
+}
+
+.proposito-sep {
+  width: 48px;
+  height: 1px;
+  background: var(--borgona);
+  margin: 28px 0;
+  opacity: 0.3;
+}
+
+.proposito-text {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--gris-oscuro);
+  line-height: 1.85;
+  opacity: 0.85;
+}
+
+
+/* ── VALORES ── */
+#valores {
+  padding: 80px 0;
+  background: var(--beige-claro);
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--borgona-light);
+  border: 1px solid var(--borgona-light);
+}
+
+.valor {
+  background: var(--beige-claro);
+  padding: 44px 36px;
+  transition: background var(--t);
+}
+.valor:hover { background: var(--blanco); }
+
+.valor-icon {
+  font-family: var(--serif);
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--borgona);
+  opacity: 0.25;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.valor-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--borgona);
+  margin-bottom: 12px;
+}
+
+.valor-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gris-oscuro);
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+
+/* ── EQUIPO ── */
+#equipo {
+  padding: 100px 0;
+  background: var(--blanco);
+}
+
+.equipo-intro {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.personas-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* Layout de cada persona: imagen | texto */
+.persona-full {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Segunda persona: texto | imagen (invertido) */
+.persona-full.reverse { grid-template-columns: 1fr 340px; }
+.persona-full.reverse .persona-img-col  { order: 2; }
+.persona-full.reverse .persona-text-col { order: 1; }
+
+/* Imagen / placeholder */
+.persona-img-wrap { position: relative; }
+
+.persona-img-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(160deg, var(--beige-arena), var(--arena-oscuro));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+/* Marca de agua sobre el placeholder */
+.persona-img-placeholder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/logo.png');
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+}
+
+.persona-initials {
+  font-family: var(--serif);
+  font-size: 72px;
+  font-weight: 300;
+  color: var(--borgona);
+  opacity: 0.5;
+  z-index: 1;
+  position: relative;
+}
+
+/* Badge con nombre sobre la imagen */
+.persona-img-badge {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: var(--borgona);
+  padding: 16px 24px;
+}
+
+.persona-img-badge-name {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--beige-claro);
+  letter-spacing: 0.02em;
+  display: block;
+}
+
+.persona-img-badge-role {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--arena-oscuro);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 3px;
+}
+
+/* Contenido de texto */
+.persona-text-col { padding-top: 8px; }
+
+.persona-kicker {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--verde-oliva);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.persona-name-big {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 300;
+  color: var(--borgona);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.persona-title-line {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--gris-oscuro);
+  opacity: 0.65;
+  margin-bottom: 24px;
+}
+
+.persona-sep {
+  width: 40px;
+  height: 2px;
+  background: var(--borgona);
+  opacity: 0.25;
+  margin-bottom: 28px;
+}
+
+.persona-bio-full {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--gris-oscuro);
+  line-height: 1.9;
+  opacity: 0.88;
+  margin-bottom: 20px;
+}
+.persona-bio-full strong {
+  font-weight: 500;
+  color: var(--borgona);
+  opacity: 1;
+}
+
+/* Tags de especialidad */
+.persona-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.persona-tag {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--borgona);
+  border: 1px solid rgba(122, 30, 44, 0.2);
+  padding: 6px 14px;
+  border-radius: 2px;
+}
+
+
+/* ── FILOSOFÍA ── */
+#filosofia {
+  padding: 100px 0;
+  background: var(--borgona);
+  position: relative;
+  overflow: hidden;
+}
+
+.filosofia-wm {
+  position: absolute;
+  right: -80px;
+  bottom: -80px;
+  width: 400px;
+  height: 400px;
+  opacity: 0.05;
+  pointer-events: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filosofia-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.filosofia-content .section-eyebrow { color: var(--arena-oscuro); opacity: 0.8; }
+.filosofia-content .section-title   { color: var(--beige-claro); text-align: left; }
+.filosofia-content .section-desc    { color: var(--beige-arena); opacity: 0.85; text-align: left; }
+
+.filosofia-sep {
+  width: 48px;
+  height: 1px;
+  background: var(--arena-oscuro);
+  margin: 28px 0;
+  opacity: 0.5;
+}
+
+.filosofia-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.filosofia-pilar {
+  border-left: 2px solid rgba(232, 216, 195, 0.25);
+  padding-left: 24px;
+}
+
+.filosofia-pilar-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--beige-arena);
+  margin-bottom: 6px;
+}
+
+.filosofia-pilar-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--beige-arena);
+  opacity: 0.65;
+  line-height: 1.7;
+}
+
+
+/* ── CTA FINAL ── */
+#qs-cta {
+  padding: 100px 0;
+  background: var(--beige-claro);
+  text-align: center;
+}
+
+.cta-title {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 300;
+  color: var(--borgona);
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.cta-sub {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--gris-oscuro);
+  opacity: 0.8;
+  margin-bottom: 40px;
+  line-height: 1.75;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .proposito-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  .valores-grid { grid-template-columns: 1fr; }
+
+  .persona-full,
+  .persona-full.reverse         { grid-template-columns: 1fr; }
+  .persona-full.reverse .persona-img-col,
+  .persona-full.reverse .persona-text-col { order: unset; }
+  .persona-img-placeholder      { aspect-ratio: 4 / 3; }
+
+  .filosofia-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 0 24px;
+  }
+  .filosofia-content .section-title,
+  .filosofia-content .section-desc { text-align: center; }
+  .filosofia-sep                    { margin-left: auto; margin-right: auto; }
+}
