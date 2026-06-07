@@ -77,47 +77,116 @@
   background: var(--beige-claro);
 }
 
-.valores-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--borgona-light);
-  border: 1px solid var(--borgona-light);
+/* ── VALORES / METODOLOGÍA ─────────────────────────── */
+
+#valores .section-header {
+  margin-bottom: 2rem;
 }
 
-.valor {
-  background: var(--beige-claro);
-  padding: 44px 36px;
-  transition: background var(--t);
+/* Desktop: hexágono visible, mobile oculto */
+.valores-hex {
+  max-width: 760px;
+  margin: 0 auto;
 }
-.valor:hover { background: var(--blanco); }
-
-.valor-icon {
-  font-family: var(--serif);
-  font-size: 40px;
-  font-weight: 300;
-  color: var(--borgona);
-  opacity: 0.25;
-  line-height: 1;
-  margin-bottom: 16px;
+ 
+.valores-mobile {
+  display: none;
 }
 
-.valor-title {
-  font-family: var(--serif);
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--borgona);
-  margin-bottom: 12px;
+/* Hover en gajos SVG */
+.gajo {
+  cursor: pointer;
 }
 
-.valor-desc {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--gris-oscuro);
-  line-height: 1.8;
-  opacity: 0.8;
+.gajo .gajo-fill {
+  transition: fill 0.25s ease;
 }
 
+.gajo:hover .gajo-fill {
+  fill: #D6C4B0;
+}
+
+.gajo .gajo-desc {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.gajo:hover .gajo-desc {
+  opacity: 1;
+}
+
+.gajo .gajo-titulo {
+  transition: opacity 0.25s ease;
+}
+
+.gajo:hover .gajo-titulo {
+  opacity: 0;
+}
+
+/* Mobile: grilla 2x3 */
+@media (max-width: 768px) {
+  .valores-hex {
+    display: none;
+  }
+
+  .valores-mobile {
+    display: block;
+  }
+
+  .logo-mobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .logo-mobile img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+  }
+
+  .valores-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #C9A88E;
+    border: 1px solid #C9A88E;
+  }
+
+  .valor-card {
+    padding: 1.1rem 0.9rem;
+    transition: background 0.2s ease;
+  }
+
+  .valor-card:nth-child(odd) {
+    background: #EDE4DA;
+  }
+
+  .valor-card:nth-child(even) {
+    background: #F5EFEA;
+  }
+
+  .valor-card:hover {
+    background: #D6C4B0;
+  }
+
+  .valor-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7A1E2C;
+    margin: 0 0 0.4rem;
+    line-height: 1.2;
+  }
+
+  .valor-card-desc {
+    font-size: 0.75rem;
+    color: #555;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
 
 /* ── EQUIPO ── */
 #equipo {

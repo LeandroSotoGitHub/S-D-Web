@@ -150,7 +150,10 @@
   align-items: center;
   justify-content: center;
 }
-.pilar-icon svg { width: 36px; height: 36px; }
+.pilar-icon svg {
+  width: 72px;
+  height: 72px;
+}
 
 .pilar-title {
   font-family: var(--serif);
