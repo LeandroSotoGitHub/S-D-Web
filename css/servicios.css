@@ -21,6 +21,7 @@
   height: 500px;
   opacity: 0.05;
   pointer-events: none;
+  background-image: url('../img/logo.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -78,7 +79,7 @@
   font-size: 30px;
   font-weight: 300;
   color: var(--borgona);
-  opacity: 0.45;
+  opacity: 0.6; /* mínimo para contraste AA (texto grande) */
   line-height: 1;
 }
 

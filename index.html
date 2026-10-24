@@ -1,9 +1,73 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S&D — Sostenibilidad y Desarrollo de Negocios</title>
+  <title>Consultora para pymes y empresas familiares | S&amp;D</title>
+  <meta name="description" content="Consultora para pymes y empresas familiares. Integramos gestión y desarrollo humano para ordenar y hacer crecer tu empresa. Empezá por un diagnóstico." />
+  <link rel="canonical" href="https://leandrosotogithub.github.io/S-D-Web/" />
+
+  <!-- Vista previa al compartir (WhatsApp, LinkedIn, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="S&amp;D — Sostenibilidad y Desarrollo de Negocios" />
+  <meta property="og:title" content="Consultora para pymes y empresas familiares | S&amp;D" />
+  <meta property="og:description" content="Consultora para pymes y empresas familiares. Integramos gestión y desarrollo humano para ordenar y hacer crecer tu empresa. Empezá por un diagnóstico." />
+  <meta property="og:url" content="https://leandrosotogithub.github.io/S-D-Web/" />
+  <meta property="og:image" content="https://leandrosotogithub.github.io/S-D-Web/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Logo de S&amp;D — Sostenibilidad y Desarrollo de Negocios" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Datos estructurados (schema.org) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://leandrosotogithub.github.io/S-D-Web/#organizacion",
+      "name": "S&D — Sostenibilidad y Desarrollo de Negocios",
+      "alternateName": "S&D",
+      "url": "https://leandrosotogithub.github.io/S-D-Web/",
+      "logo": "https://leandrosotogithub.github.io/S-D-Web/LOGOS/PNG/isotipo-color.png",
+      "image": "https://leandrosotogithub.github.io/S-D-Web/img/og-image.jpg",
+      "description": "Consultora para pymes y empresas familiares. Integra gestión del negocio y desarrollo humano: diagnóstico, estructura, acompañamiento estratégico, liderazgo y sucesión.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Argentina"
+      },
+      "knowsAbout": [
+        "Gestión de pymes",
+        "Empresas familiares",
+        "Sucesión en empresas familiares",
+        "Procesos",
+        "Liderazgo",
+        "Coaching ejecutivo"
+      ],
+      "founder": [
+        {
+          "@id": "https://leandrosotogithub.github.io/S-D-Web/quienes-somos.html#yanina"
+        },
+        {
+          "@id": "https://leandrosotogithub.github.io/S-D-Web/quienes-somos.html#claudia"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://leandrosotogithub.github.io/S-D-Web/#sitio",
+      "url": "https://leandrosotogithub.github.io/S-D-Web/",
+      "name": "S&D",
+      "inLanguage": "es-AR",
+      "publisher": {
+        "@id": "https://leandrosotogithub.github.io/S-D-Web/#organizacion"
+      }
+    }
+  ]
+}
+  </script>
   <link rel="icon" href="img/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
@@ -11,7 +75,10 @@
   <!-- Tipografías -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Carga sin bloquear el render: primero se ve el texto con la fuente del sistema -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" /></noscript>
 
   <!-- Estilos -->
   <link rel="stylesheet" href="css/shared.css" />
@@ -22,7 +89,7 @@
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="img/logo.svg" alt="S&D — Sostenibilidad y Desarrollo de Negocios" />
+      <img src="img/logo.svg" alt="S&amp;D" width="51" height="44" />
       <div>
         <span class="brand-name">S&amp;D</span>
         <span class="brand-sub">Sostenibilidad y Desarrollo</span>
@@ -54,7 +121,6 @@
 <section id="hero">
 
   <!-- Marca de agua decorativa (logo muy tenue de fondo) -->
-  <!-- El JS de index.js le asigna la imagen -->
   <div class="hero-wm" id="hero-wm"></div>
 
   <div class="hero-inner hero-zone">
@@ -92,7 +158,7 @@
     <!-- Logo animado -->
     <div class="hero-visual fade-up d2">
       <div class="hero-logo-wrap">
-        <img src="img/logo.svg" alt="S&D" />
+        <img src="img/logo.svg" alt="S&amp;D" width="230" height="199" />
       </div>
       <p class="hero-tagline">
         Procesos de desarrollo<br />para negocios en evolución
@@ -214,7 +280,7 @@
       <!-- YANINA DI BOSCIO -->
       <article class="socia fade-up">
         <div class="socia-foto">
-          <img src="img/yanina.jpg" alt="Yanina Di Boscio" loading="lazy" />
+          <img src="img/yanina-400.jpg" srcset="img/yanina-400.jpg 400w, img/yanina.jpg 800w" sizes="(max-width: 600px) 120px, 200px" alt="Yanina Di Boscio, socia de S&amp;D" width="400" height="534" loading="lazy" />
         </div>
         <div class="socia-body">
           <span class="socia-kicker">Gestión · Procesos · Estrategia Financiera</span>
@@ -271,8 +337,11 @@
 
     <!-- Slide 1 -->
     <div class="carousel-slide">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80&fit=crop"
-           alt="Estrategia de negocios" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&amp;q=80&amp;fit=crop&amp;auto=format"
+           srcset="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&amp;q=80&amp;fit=crop&amp;auto=format 800w, https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&amp;q=80&amp;fit=crop&amp;auto=format 1400w"
+           sizes="100vw"
+           width="1400" height="933"
+           alt="Oficina moderna, luminosa y ordenada" loading="lazy" />
       <div class="carousel-overlay"></div>
       <div class="carousel-content">
         <div>
@@ -290,8 +359,11 @@
 
     <!-- Slide 2 -->
     <div class="carousel-slide">
-      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&q=80&fit=crop"
-           alt="Liderazgo y equipos" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&amp;q=80&amp;fit=crop&amp;auto=format"
+           srcset="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&amp;q=80&amp;fit=crop&amp;auto=format 800w, https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&amp;q=80&amp;fit=crop&amp;auto=format 1400w"
+           sizes="100vw"
+           width="1400" height="933"
+           alt="Equipo en una reunión de planificación, con notas adhesivas en la pared" loading="lazy" />
       <div class="carousel-overlay"></div>
       <div class="carousel-content">
         <div>
@@ -309,8 +381,11 @@
 
     <!-- Slide 3 -->
     <div class="carousel-slide">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80&fit=crop"
-           alt="Crecimiento sostenible" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&amp;q=80&amp;fit=crop&amp;auto=format"
+           srcset="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&amp;q=80&amp;fit=crop&amp;auto=format 800w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&amp;q=80&amp;fit=crop&amp;auto=format 1400w"
+           sizes="100vw"
+           width="1400" height="997"
+           alt="Notebook con un tablero de indicadores y gráficos de crecimiento" loading="lazy" />
       <div class="carousel-overlay"></div>
       <div class="carousel-content">
         <div>
@@ -518,7 +593,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="img/logo-blanco.svg" alt="S&D" />
+      <img src="img/logo-blanco.svg" alt="S&amp;D" width="44" height="38" loading="lazy" />
       <div>
         <span class="footer-brand-name">S&amp;D</span>
         <span class="footer-tagline-small">Sostenibilidad y Desarrollo de Negocios</span>

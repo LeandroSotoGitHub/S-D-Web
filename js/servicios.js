@@ -1,15 +1,8 @@
 /* ============================================
    S&D — JAVASCRIPT DE SERVICIOS
-   Incluye: marca de agua, sidebar activo.
+   Incluye: sidebar activo.
    Requiere: js/shared.js cargado antes.
 ============================================ */
-
-
-/* ── MARCA DE AGUA ── */
-const pageHeroWm = document.getElementById('page-hero-wm');
-if (pageHeroWm) {
-  pageHeroWm.style.backgroundImage = "url('img/logo.svg')";
-}
 
 
 /* ── SIDEBAR: RESALTAR SERVICIO ACTIVO AL SCROLLEAR ──

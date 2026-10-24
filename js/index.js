@@ -1,16 +1,8 @@
 /* ============================================
    S&D — JAVASCRIPT DE INICIO (index.html)
-   Incluye: marcas de agua, carrusel.
+   Incluye: carrusel.
    Requiere: js/shared.js cargado antes.
 ============================================ */
-
-
-/* ── MARCAS DE AGUA (logo decorativo de fondo) ── */
-const heroWm    = document.getElementById('hero-wm');
-const contactoWm = document.getElementById('contacto-wm');
-
-if (heroWm)     heroWm.style.backgroundImage     = "url('img/logo.svg')";
-if (contactoWm) contactoWm.style.backgroundImage = "url('img/logo.svg')";
 
 
 /* ── CARRUSEL ──

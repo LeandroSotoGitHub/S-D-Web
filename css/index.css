@@ -25,6 +25,7 @@
   height: 550px;
   opacity: 0.04;
   pointer-events: none;
+  background-image: url('../img/logo.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -625,6 +626,7 @@
   height: 700px;
   opacity: 0.03;
   pointer-events: none;
+  background-image: url('../img/logo.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

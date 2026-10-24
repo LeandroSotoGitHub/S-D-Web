@@ -21,6 +21,7 @@
   height: 500px;
   opacity: 0.05;
   pointer-events: none;
+  background-image: url('../img/logo.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -257,6 +258,7 @@
 .persona-img {
   display: block;
   width: 100%;
+  height: auto; /* manda el aspect-ratio, no el height del HTML */
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center 20%;
@@ -378,6 +380,7 @@
   height: 400px;
   opacity: 0.05;
   pointer-events: none;
+  background-image: url('../img/logo.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
