@@ -10,3 +10,6 @@ MARCA/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Maquetas de propuestas (solo local)
+_propuestas/

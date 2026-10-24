@@ -338,17 +338,24 @@
 /* ── SERVICIOS (preview) ── */
 #servicios { padding: 100px 0; background: var(--beige-claro); }
 
-.servicios-grid {
+/* Recorrido de 3 pasos: Diagnóstico → Cimientos → Mesa */
+.recorrido {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 48px;
 }
+.recorrido .servicio { position: relative; }
 
-.servicios-bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 20px;
+/* Flecha entre pasos */
+.recorrido .servicio:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--arena-oscuro);
 }
 
 .servicio {
@@ -414,6 +421,88 @@
   margin-top: 28px;
   padding-top: 20px;
   border-top: 1px solid var(--borgona-light);
+}
+
+/* Etiqueta de etapa del recorrido */
+.paso-etapa {
+  align-self: flex-start;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--borgona);
+  border: 1px solid rgba(122, 30, 44, 0.3);
+  padding: 5px 10px;
+  margin-bottom: 18px;
+}
+
+.servicio-versiones {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--borgona);
+  margin-top: 14px;
+}
+
+/* Liderazgo: banda que acompaña a todo el recorrido */
+.band-transversal {
+  margin-top: 40px;
+  background: var(--borgona);
+  padding: 32px 40px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+.band-eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--arena-oscuro);
+}
+.band-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--beige-claro);
+  white-space: nowrap;
+}
+.band-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--beige-arena);
+  line-height: 1.7;
+}
+.band-link {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--beige-claro);
+  border-bottom: 1px solid var(--arena-oscuro);
+  padding-bottom: 4px;
+  white-space: nowrap;
+  transition: border-color var(--t);
+}
+.band-link:hover { border-color: var(--beige-claro); }
+
+/* Legado: mención secundaria */
+.linea-secundaria {
+  margin-top: 28px;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--gris-oscuro);
+  opacity: 0.85;
+}
+.linea-secundaria a {
+  margin-left: 8px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-style: normal;
+  color: var(--borgona);
+  border-bottom: 1px solid rgba(122, 30, 44, 0.3);
 }
 
 
@@ -498,8 +587,18 @@
   .enfoque-content .section-desc { text-align: center; }
   .enfoque-sep                    { margin-left: auto; margin-right: auto; }
 
-  .servicios-grid,
-  .servicios-bottom { grid-template-columns: 1fr; }
+  .recorrido { grid-template-columns: 1fr; gap: 44px; }
+  .recorrido .servicio:not(:last-child)::after {
+    content: "↓";
+    top: auto;
+    right: auto;
+    bottom: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .band-transversal { grid-template-columns: 1fr; gap: 14px; padding: 28px 24px; }
+  .band-title       { white-space: normal; }
+  .band-link        { justify-self: start; }
 
   .carousel-content { padding: 0 40px; }
   .carousel-nav     { left: 40px; }
