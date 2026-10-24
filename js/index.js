@@ -14,8 +14,10 @@ if (contactoWm) contactoWm.style.backgroundImage = "url('img/logo.svg')";
 
 
 /* ── CARRUSEL ──
-   Auto-play cada 5 segundos.
+   Auto-play cada 5 segundos (se pausa fuera de pantalla o con la pestaña oculta).
    Navegación con flechas, dots y swipe táctil.
+   Transición por fundido: así el paso del último slide al primero
+   no "rebobina" pasando por todos los slides.
 */
 const track   = document.getElementById('carouselTrack');
 const dotsBox = document.getElementById('carouselDots');
@@ -46,7 +48,9 @@ if (track) {
   // Ir a un slide específico
   function goTo(n) {
     current = ((n % slides.length) + slides.length) % slides.length;
-    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    slides.forEach(function (slide, i) {
+      slide.classList.toggle('active', i === current);
+    });
 
     // Actualizar dots activos
     document.querySelectorAll('.carousel-dot').forEach(function (dot, i) {
@@ -54,11 +58,24 @@ if (track) {
     });
   }
 
-  // Reiniciar el timer de auto-play
+  // Reiniciar el timer de auto-play (solo si el carrusel está a la vista)
+  let inView = false;
+
   function resetAuto() {
     clearInterval(autoTimer);
-    autoTimer = setInterval(function () { goTo(current + 1); }, 5000);
+    autoTimer = null;
+    if (inView && !document.hidden) {
+      autoTimer = setInterval(function () { goTo(current + 1); }, 5000);
+    }
   }
+
+  // Pausar cuando el carrusel sale de pantalla o la pestaña se oculta
+  new IntersectionObserver(function (entries) {
+    inView = entries[0].isIntersecting;
+    resetAuto();
+  }, { threshold: 0.3 }).observe(track);
+
+  document.addEventListener('visibilitychange', resetAuto);
 
   // Flechas de navegación
   if (prevBtn) {
@@ -75,21 +92,26 @@ if (track) {
   }
 
   // Soporte para swipe táctil (mobile)
+  // Solo cuenta como swipe si el gesto es más horizontal que vertical:
+  // así, al scrollear la página por encima del carrusel no cambia de slide.
   let touchStartX = 0;
+  let touchStartY = 0;
 
   track.addEventListener('touchstart', function (e) {
     touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
   }, { passive: true });
 
   track.addEventListener('touchend', function (e) {
-    const diff = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(diff) > 50) {
-      goTo(current + (diff < 0 ? 1 : -1));
+    const diffX = e.changedTouches[0].clientX - touchStartX;
+    const diffY = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY) * 1.5) {
+      goTo(current + (diffX < 0 ? 1 : -1));
       resetAuto();
     }
   }, { passive: true });
 
   // Iniciar
   buildDots();
-  resetAuto();
+  goTo(0);
 }

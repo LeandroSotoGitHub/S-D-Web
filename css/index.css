@@ -162,6 +162,101 @@
 }
 
 
+/* ── LAS SOCIAS ── */
+#socias { padding: 100px 0; background: var(--beige-claro); }
+
+.socias-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Tarjeta horizontal: foto | texto */
+.socia {
+  background: var(--blanco);
+  border: 1px solid var(--borgona-light);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+/* La foto ocupa todo el alto de la tarjeta */
+.socia-foto {
+  min-height: 250px;
+  overflow: hidden;
+}
+.socia-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Placeholder hasta tener la foto real */
+.socia-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(160deg, var(--beige-arena), var(--arena-oscuro));
+}
+.socia-placeholder span {
+  font-family: var(--serif);
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--borgona);
+  opacity: 0.5;
+}
+
+.socia-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socia-kicker {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--verde-oliva);
+}
+
+.socia-nombre {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--borgona);
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.socia-titulo {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--gris-oscuro);
+  opacity: 0.75;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.socia-texto {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  color: var(--gris-oscuro);
+  line-height: 1.55;
+}
+
+.socias-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+
 /* ── CARRUSEL ── */
 #carousel {
   background: var(--borgona);
@@ -169,17 +264,23 @@
   overflow: hidden;
 }
 
+/* Slides apilados: el JS marca el activo con .active y cambian por fundido */
 .carousel-track {
-  display: flex;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  height: 480px;
 }
 
 .carousel-slide {
-  min-width: 100%;
-  height: 480px;
-  position: relative;
-  flex-shrink: 0;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+.carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .carousel-slide img {
@@ -600,7 +701,17 @@
   .band-title       { white-space: normal; }
   .band-link        { justify-self: start; }
 
+  .socias-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+
   .carousel-content { padding: 0 40px; }
   .carousel-nav     { left: 40px; }
   .carousel-arrows  { right: 40px; }
+}
+
+@media (max-width: 600px) {
+  .socia        { grid-template-columns: 120px 1fr; }
+  .socia-foto   { min-height: 160px; }
+  .socia-body   { padding: 18px; }
+  .socia-nombre { font-size: 22px; }
+  .socia-texto  { font-size: 15px; }
 }
