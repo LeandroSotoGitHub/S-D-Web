@@ -461,8 +461,6 @@
 @media (max-width: 900px) {
   .proposito-grid { grid-template-columns: 1fr; gap: 40px; }
 
-  .valores-grid { grid-template-columns: 1fr; }
-
   .persona-full,
   .persona-full.reverse         { grid-template-columns: 1fr; }
   .persona-full.reverse .persona-img-col,

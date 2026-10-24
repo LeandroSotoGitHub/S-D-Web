@@ -1,0 +1,11 @@
+# Contexto interno de trabajo (repo público en GitHub Pages: NO subir)
+CLAUDE.md
+LOGS.md
+Raw - Git Ignore/
+.omc/
+.claude/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
