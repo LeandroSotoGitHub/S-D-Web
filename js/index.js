@@ -9,8 +9,8 @@
 const heroWm    = document.getElementById('hero-wm');
 const contactoWm = document.getElementById('contacto-wm');
 
-if (heroWm)     heroWm.style.backgroundImage     = "url('img/logo.png')";
-if (contactoWm) contactoWm.style.backgroundImage = "url('img/logo.png')";
+if (heroWm)     heroWm.style.backgroundImage     = "url('img/logo.svg')";
+if (contactoWm) contactoWm.style.backgroundImage = "url('img/logo.svg')";
 
 
 /* ── CARRUSEL ──

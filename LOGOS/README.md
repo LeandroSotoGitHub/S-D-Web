@@ -24,6 +24,7 @@ Logos en alta calidad, redibujados en vector a partir de `img/logo.png` (octubre
 - Formas de los arcos trazadas en curvas y suavizadas, sin cambiar su forma ni posición.
 - Colores llevados exactamente a la paleta oficial: borgoña `#7A1E2C`, beige arena `#E8D8C3`, verde oliva `#6F6A49`.
 - Se quitaron las sombras y degradés que tenía la imagen original.
+- La D va **sin relleno**: su hueco es transparente (en el original se veía el arco arena por detrás).
 - Las letras "S&D" se reconstruyeron con **Libre Caslon Text** (Google Fonts, licencia OFL), la serif que mejor coincide con el dibujo original, ajustada a la misma caja de cada letra. Están convertidas en curvas: no hace falta instalar la fuente.
 
 Reglas de uso (resguardo, tamaños mínimos, usos incorrectos): ver el **Manual de marca** en `MARCA/`.

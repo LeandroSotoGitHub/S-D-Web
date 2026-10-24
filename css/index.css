@@ -87,7 +87,7 @@
 }
 
 .hero-logo-wrap img {
-  width: 260px;
+  width: 230px;
   height: auto;
   animation: float 6s ease-in-out infinite;
 }
@@ -485,7 +485,7 @@
   .hero-sub, .hero-tagline { margin-left: auto; margin-right: auto; }
   .hero-actions             { justify-content: center; }
   .hero-visual              { order: -1; }
-  .hero-logo-wrap img       { width: 180px; }
+  .hero-logo-wrap img       { width: 160px; }
 
   .pilares-grid { grid-template-columns: 1fr; }
 

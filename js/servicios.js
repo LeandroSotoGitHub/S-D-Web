@@ -8,7 +8,7 @@
 /* ── MARCA DE AGUA ── */
 const pageHeroWm = document.getElementById('page-hero-wm');
 if (pageHeroWm) {
-  pageHeroWm.style.backgroundImage = "url('img/logo.png')";
+  pageHeroWm.style.backgroundImage = "url('img/logo.svg')";
 }
 
 
