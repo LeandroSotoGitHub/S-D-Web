@@ -573,8 +573,8 @@
   }
   .hero-sub, .hero-tagline { margin-left: auto; margin-right: auto; }
   .hero-actions             { justify-content: center; }
-  .hero-visual              { order: -1; }
-  .hero-logo-wrap img       { width: 160px; }
+  /* En mobile la marca ya está en el nav: el logo del hero empujaba los CTA fuera de pantalla */
+  .hero-visual              { display: none; }
 
   .pilares-grid { grid-template-columns: 1fr; }
 
