@@ -253,6 +253,15 @@
   position: relative;
 }
 
+/* Foto real (mismo formato que el placeholder) */
+.persona-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
 /* Badge con nombre sobre la imagen */
 .persona-img-badge {
   position: absolute;
@@ -466,6 +475,8 @@
   .persona-full.reverse .persona-img-col,
   .persona-full.reverse .persona-text-col { order: unset; }
   .persona-img-placeholder      { aspect-ratio: 4 / 3; }
+  /* Foto real más alta: con 4:3 la franja del nombre tapaba la cara */
+  .persona-img                  { aspect-ratio: 4 / 5; object-position: center 10%; }
 
   .filosofia-inner {
     grid-template-columns: 1fr;
