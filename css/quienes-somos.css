@@ -222,37 +222,8 @@
 /* Imagen / placeholder */
 .persona-img-wrap { position: relative; }
 
-.persona-img-placeholder {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  background: linear-gradient(160deg, var(--beige-arena), var(--arena-oscuro));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
 /* Marca de agua sobre el placeholder */
-.persona-img-placeholder::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('../img/logo.svg');
-  background-size: 55%;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.1;
-}
 
-.persona-initials {
-  font-family: var(--serif);
-  font-size: 72px;
-  font-weight: 300;
-  color: var(--borgona);
-  opacity: 0.5;
-  z-index: 1;
-  position: relative;
-}
 
 /* Foto real (mismo formato que el placeholder) */
 .persona-img {
@@ -477,7 +448,6 @@
   .persona-full.reverse         { grid-template-columns: 1fr; }
   .persona-full.reverse .persona-img-col,
   .persona-full.reverse .persona-text-col { order: unset; }
-  .persona-img-placeholder      { aspect-ratio: 4 / 3; }
   /* Foto real más alta: con 4:3 la franja del nombre tapaba la cara */
   .persona-img                  { aspect-ratio: 4 / 5; object-position: center 10%; }
 

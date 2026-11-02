@@ -230,7 +230,7 @@
   width: 100%;
   height: 360px;
   object-fit: cover;
-  object-position: center 25%; /* fotos verticales: priorizar la cara */
+  object-position: center;
 }
 
 /* Número decorativo sobre la imagen */
