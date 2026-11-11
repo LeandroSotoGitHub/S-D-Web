@@ -1,0 +1,6 @@
+# Archivos del repo que no son parte de la web
+.assetsignore
+.gitignore
+wrangler.jsonc
+.wrangler
+**/.git
